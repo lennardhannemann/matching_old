@@ -1,0 +1,25 @@
+{{ block title }}
+   <p align="center">Questionnaire</p>
+{{ endblock }}
+{{ block content }}
+{% block styles %}
+<link href="{% static 'Global.css' %}" rel="stylesheet">
+<link href="{% static 'tbl.css' %}" rel="stylesheet">
+{% endblock %}
+<div  class="textbox">
+<p align="justify">Please answer the following questions.</p>
+
+ <b>1)</b>
+ {{ formfield player.question1 }}
+ <b>2)</b>
+ {{ formfield player.question2 }}
+ <b>3)</b>
+ {{ formfield player.question3 }}
+ <b>4)</b>
+ {{ formfield player.question4 }}
+    <b>5)</b>
+ {{ formfield player.question5 }}
+</div>
+    {{ next_button }}
+
+{{ endblock }}
