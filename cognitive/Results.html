@@ -1,0 +1,61 @@
+{{ block title }}
+   <p align="center">Your Payoff</p>
+{{ endblock }}
+{% block styles %}
+<link href="{% static 'Global.css' %}" rel="stylesheet">
+<link href="{% static 'tbl.css' %}" rel="stylesheet">
+{% endblock %}
+{{ block content }}
+<div class="textbox">
+    <p align="justify"> Thank you for your participation. For your payoff investment decision {{b}} was randomly selected. In this scenario you invested <b> {{o}} MU </b> in the risky asset and
+    the return of the asset after one additional year is <b>{{returns}}%</b>.
+     Thus, your wealth is
+    <p align = "center" >
+<table align = "center" width="100%" frame="box" class="tabelle2">
+    <tr>
+        <td align = "center"> Invested Amount Risky Asset </td>
+        <td></td>
+        <td align = "center"> Return </td>
+        <td></td>
+        <td align = "center"> Invested Amount Risk-free Asset</td>
+        <td></td>
+        <td align = "center"> Final Wealth</td>
+
+
+    </tr>
+    <tr style="background-color: white">
+    <td align = "center" > {{o}} MU </td>
+    <td align = "center">*</td>
+    <td align = "center" >{{returns2}}</td>
+    <td align = "center">+</td>
+    <td align = "center" >{{o2}} MU</td>
+    <td align = "center">=</td>
+    <td align = "center" >{{wealth}} MU</td>
+    </tr>
+</table>
+
+
+
+</p>
+    and you get a variable payout worth <b>{{x}}</b>. In total you get <b> {{z}}</b>.
+</p>
+    <div>
+        Below you can write comments or suggestions you have. We appreciate any feedback!
+        <input name="feedback" style="width:100%; height:100px ;border: 1px solid black; border-radius: 5px" class="your_class"/>
+
+
+
+    </div>
+    <p></p>
+    <div style=”text−align; center ; margin : 40px auto”>
+
+   Please click the following link to get back to Prolific: <a href= {{link}} class=”btn btn−primary”> Prolific</a>
+</div>
+
+
+</div>
+
+
+{{ endblock }}
+
+

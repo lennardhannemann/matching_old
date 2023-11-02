@@ -1,0 +1,63 @@
+{{ block title }}
+   <p align="center">Questionnaire</p>
+{{ endblock }}
+{{ block content }}
+{% block styles %}
+<link href="{% static 'Global.css' %}" rel="stylesheet">
+
+{% endblock %}
+<div class="textbox">
+<p align="justify">Please answer the following questions.</p>
+    <b>1)</b>
+    <p>
+    A bat and a ball cost £110 in total. The bat costs £100 more than the ball. How much does the ball cost?
+
+     </p>
+        <p>
+        <input name="question1" type="number" style="width:7%; border: 1px solid black; border-radius: 5px" class="your_class"/>  £
+
+    </p>
+    <b>2)</b>
+    <p>
+   In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the
+        entire lake, how long would it take for the patch to cover half of the lake?
+
+     </p>
+        <p>
+        <input name="question2" type="number" style="width:7%; border: 1px solid black; border-radius: 5px" class="your_class2"/>   days
+
+    </p>
+    <b>3)</b>
+    <p>
+    If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?
+
+     </p>
+        <p>
+        <input name="question3" type="number" style="width:7%; border: 1px solid black; border-radius: 5px" class="your_class3"/>   minutes
+
+    </p>
+</div>
+<script>
+document.querySelector(".your_class").addEventListener("keypress", function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+});
+document.querySelector(".your_class2").addEventListener("keypress", function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+});
+document.querySelector(".your_class3").addEventListener("keypress", function (evt) {
+    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+    {
+        evt.preventDefault();
+    }
+});
+</script>
+
+    {{ next_button }}
+
+{{ endblock }}
