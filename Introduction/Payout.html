@@ -1,0 +1,46 @@
+{{ block title }}
+   <p align="center">Your Payoff</p>
+{{ endblock }}
+{{ block content }}
+<link href="{% static 'Global.css' %}" rel="stylesheet">
+<link href="{% static 'tbl.css' %}" rel="stylesheet">
+<div  class="textbox">
+<p align="justify">
+At the end you will receive a <b>fixed and a variable payment</b>. <br>
+    For the variable payment one of your investment decisions will be selected randomly and the wealth after another year will be calculated. <br>
+    For example if the price of the asset increases by 20% in the next year and you invested 50% of the 1000 MU,
+    your final wealth is
+    <p>
+    <table align = "center" width="100%" frame="box" class="tabelle2" >
+    <tr>
+        <td align = "center"> Invested Amount Risky Asset </td>
+        <td></td>
+        <td align = "center"> Return </td>
+        <td></td>
+        <td align = "center"> Invested Amount Risk-free Asset</td>
+        <td></td>
+        <td align = "center"> Final Wealth</td>
+
+
+    </tr>
+    <tr style="background-color: white">
+    <td align = "center" > 500 MU </td>
+    <td align = "center">*</td>
+    <td align = "center" >1.2</td>
+    <td align = "center">+</td>
+    <td align = "center" >500 MU</td>
+    <td align = "center">=</td>
+    <td align = "center" >1100</td>
+    </tr>
+</table>
+
+    </p>
+    </p>
+    <p align="justify">
+    For every monetary unit you will receive <b>£0.0005</b> . In this scenario your variable payout would be £0.55. Additionally, you will receive a <b>fix payment of £1.50</b>.
+</p>
+</div>
+<div class="otree-btn-next">
+    {{ next_button }}
+</div>
+{{ endblock }}

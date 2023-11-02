@@ -1,0 +1,25 @@
+{{ block title }}
+   <p align="center">The Investment Part</p>
+{{ endblock }}
+
+{% block styles %}
+<link href="{% static 'Global.css' %}" rel="stylesheet">
+<link href="{% static 'tbl.css' %}" rel="stylesheet">
+{% endblock %}
+
+{{ block content }}
+
+<div class="textbox">
+    <p align="justify">
+ In the investment part {{c}} and you have to decide which portion of <b>1000 monetary
+        units (MU) </b> to invest in the asset.
+        The remaining part is invested in a risk-free asset with zero return. {{d}}
+</p>
+    <p>{{a}}</p>
+
+
+
+</div>
+    {{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,21 @@
+{{ block title  }}
+
+<p align="center">
+Introduction
+</p>
+{{ endblock }}
+{{ block content }}
+<link href="{% static 'Global.css' %}" rel="stylesheet">
+<link href="{% static 'tbl.css' %}" rel="stylesheet">
+<div class="textbox">
+<p align="justify">
+Welcome to this experiment and thank you for participating. Please take your time and read all instructions and questions carefully. All your answers will be treated anonymously and
+will be used for research purposes only. <br>
+Please do not use the "Back" or "Refresh" buttons.
+</p>
+
+</div>
+     {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

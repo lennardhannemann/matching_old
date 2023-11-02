@@ -1,0 +1,28 @@
+      {{ block title }}
+   <p align="center">General Topic</p>
+{{ endblock }}
+{{ block content }}
+ <link href="{% static 'Global.css' %}" rel="stylesheet">
+<link href="{% static 'tbl.css' %}" rel="stylesheet">
+<div class="textbox">
+<p align="justify">
+
+
+     Thank you for participating in this survey.
+        Your answers are very important to us. Please take your time to read the instructions and questions carefully.
+        All your answers will be treated anonymously, with strict confidentiality, and used for research purposes only.
+        If you have questions during the survey, please use the Prolific chat feature to get in contact with us.
+
+    <p>
+             Completing the survey will take approximately <b>8 minutes</b>. Participation is voluntary, and
+        you are free to retract at any point during the survey by closing the browser window and returning your submission on Prolific.
+        However, payment will only be provided in case you fully complete the survey.
+    </p>
+    <p>
+        <b>Please do not click &ldquo;return&rdquo; or &ldquo;refresh&rdquo; in your browser during the survey.</b>
+
+</p>
+</div>
+    {{ next_button }}
+
+{{ endblock }}
