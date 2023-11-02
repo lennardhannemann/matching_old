@@ -4,7 +4,7 @@ SESSION_CONFIGS = [
      dict(
          name='InvestmentDecisions',
 
-         app_sequence=['intro_exp2','inv_exp2','financialliteracy','cognitive'],
+         app_sequence=['Introduction','new','financialliteracy','cognitive'],
          num_demo_participants=600,
          use_browser_bots = False,
      ),
