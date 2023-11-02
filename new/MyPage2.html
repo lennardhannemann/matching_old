@@ -1,0 +1,44 @@
+{{ block title }}
+   <p align="center">Investment Part Task {{b}}</p>
+{{ endblock }}
+{{ block content }}
+<div style="background-color: #CFCFCF; color:black;border: 1px solid #000; border-radius:18px; padding: 4px ; margin: 2px">
+<table>
+    <tr>
+        <td width="50%", align="center"> <big> <strong>Asset A </strong></big> </td>
+        <td width="50%", align="center"> <big> <strong>Asset B </strong></big> </td>
+
+
+    </tr>
+    <tr>
+        <td align="center",><img src="{%static ImagePath%}" width="450" height="320" style="border: 1px solid #000; border-radius:18px;margin: 6px"/></td>
+        <td align="center"><img src="{%static ImagePath2%}" width="450" height="320" style="border: 1px solid #000; border-radius:18px;margin: 6px"/></td>
+    </tr>
+
+
+</table>
+<b>Preference</b>
+<p>How strongly do you prefer the selected asset? The button in the middle indicates indifference.</p>
+    <table >
+<tr align="center">
+    <th style="padding: 1px; width: 25%">Strong Preference for Asset A</th>
+    {{for choice in form.likert_scale}}
+    <td style="padding: 1px; width: 5%">{{choice}}</td>
+    {{ endfor }}
+    <th style="padding: 1px; width: 25%">Strong Preference for Asset B</th>
+
+</tr>
+        <tr align="center">
+        <th style="padding: 1px; width: 25%"></th>
+        <td style="padding: 1px; width: 5%">1</td>
+        <td style="padding: 1px; width: 5%">2</td>
+        <td style="padding: 1px; width: 5%">3</td>
+        <td style="padding: 1px; width: 5%">4</td>
+        <td style="padding: 1px; width: 5%">5</td>
+        <th style="padding: 1px; width: 25%"></th>
+        </tr>
+</table>
+</div>
+    {{ next_button }}
+
+{{ endblock }}

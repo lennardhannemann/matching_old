@@ -1,0 +1,84 @@
+{{ block title }}
+ <p align="center">Investment Part Task {{b}}</p>
+
+{{ endblock }}
+{{ block content }}
+<div style="background-color: #CFCFCF; color:black;border: 1px solid #000; border-radius:18px; padding:4px; margin: 2px">
+<p align="center">
+Below you can see, how the weekly prices of two assets evolved over the last year.
+Imagine you have 1000 MU for investment purposes.
+</p>
+
+
+<div align="center">
+
+  <table style="display: inline-block" align="center">
+    <tr height="80px">
+      <td align="center"><b>Asset A</b></td>
+    </tr>
+
+    <tr style="border:2px solid">
+      <td align="center" style="border:2px solid">
+        <b> begin of period</b>
+      </td>
+
+    </tr>
+    {{for price in pricelist1_1}}
+    <tr height="75px" style="border:2px solid">
+
+    <td widht=" 50px" style="border:2px solid" align="center">   {{price}} </td>
+
+    </tr>
+    {{endfor}}
+<tr style="border:2px solid">
+  <td align="center" style="border:2px solid"><b> end of period</b></td>
+  </tr>
+  </table>
+
+  <table style="display: inline-block" width="20%">
+    {{for g in range(0,9)}}
+    <tr>
+
+
+  </tr>
+{{endfor}}
+
+  </table>
+
+
+<table style="display: inline-block" align="center">
+  <tr height="80px">
+      <td align="center"> <b>Asset B</b></td>
+    </tr>
+    <tr style="border:2px solid">
+  <td style="border:2px solid"><b> begin of period</b></td>
+  </tr>
+    {{for price in pricelist1_2}}
+    <tr height="75px" style="border:2px solid">
+
+    <td align="center" style="border:2px solid">   {{price}} </td>
+
+    </tr>
+    {{endfor}}
+
+ <tr style="border:2px solid">
+  <td style="border:2px solid"><b> end of period</b></td>
+  </tr>
+
+
+  </table>
+
+</div>
+
+<p></p>
+<b>Investment</b>
+<p>In which asset do you want to invest these 1000 MU for one year?</p>
+    <div align="center">
+    {{formfield player.decision}}
+    </div>
+
+</div>
+
+    {{ next_button }}
+
+{{ endblock }}

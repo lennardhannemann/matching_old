@@ -1,0 +1,35 @@
+{{ block title }}
+ <p align="center">Investment Part Task {{b}}</p>
+{{ endblock }}
+{{ block content }}
+<div style="background-color: #CFCFCF; color:black;border: 1px solid #000; border-radius:18px; padding:4px; margin: 2px">
+<p align="center">
+Below you can see, how the weekly {{c}} of two assets evolved over the last year. On the horizontal axis the time frame is represented. The vertical axis represents the {{c}}.
+Imagine you have 1000 MU for investment purposes.
+</p>
+<table>
+    <tr>
+        <td width="50%", align="center"> <big> <strong>Asset A </strong></big> </td>
+        <td width="50%", align="center"> <big> <strong>Asset B </strong></big> </td>
+
+
+    </tr>
+    <tr>
+        <td align="center",><img src="{%static ImagePath%}" width="450" height="320" style="border: 1px solid #000; border-radius:18px;margin: 6px"/></td>
+        <td align="center"><img src="{%static ImagePath2%}" width="450" height="320" style="border: 1px solid #000; border-radius:18px;margin: 6px"/></td>
+    </tr>
+
+
+</table>
+
+<b>Investment</b>
+<p>In which asset do you want to invest these 1000 MU for one year?</p>
+    <div align="center">
+    {{formfield player.decision}}
+    </div>
+
+</div>
+
+    {{ next_button }}
+
+{{ endblock }}
